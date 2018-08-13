@@ -29,3 +29,9 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --f
 创建一个消息生产者z
 在kafka解压目录打开一个新的终端，输入
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+
+点对点模式:
+消费者同在一个group 就只能有其中一个消费着能获取到这条信息
+
+订阅模式:
+消费者在不同的group 中 全部消费者都能获取到这条信息
